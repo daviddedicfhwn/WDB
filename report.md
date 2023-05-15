@@ -12,6 +12,31 @@ Stars und FSK extrahieren.
 Die Implementierung erfolgt mithilfe von Python und Selenium. Selenium ermöglicht es uns, die IMDB-Website zu öffnen, 
 auf Elemente zuzugreifen und die benötigten Daten zu extrahieren.
 
+## Datenwissentschaftlicher Aspekt
+In diesem Abschnitt werden die visualisierten Daten präsentiert und erläutert.
+
+![FSK Distribution](docs/pictures/fsk_distribution.png)
+Abbildung 1: Die Verteilung der FSK-Bewertungen zeigt, dass ...
+
+![Genre Distribution](docs/pictures/genre_distribution.png)
+Abbildung 2: Die Verteilung der Genres zeigt, dass ...
+
+![Mean Rating per Genre](docs/pictures/mean_rating_per_genre.png)
+Abbildung 3: Der durchschnittliche Bewertung pro Genre zeigt, dass ...
+
+![Filmdauer und Bewertung](docs/pictures/filmdauer_und_bewertung.png)
+Abbildung 4: Der Zusammenhang zwischen Filmdauer und Bewertung zeigt, dass ...
+
+![Anzahl der Filme pro Jahr](docs/pictures/anzahl_filme_pro_jahr.png)
+Abbildung 5: Die Anzahl der Filme pro Jahr zeigt, dass ...
+
+![Top 5 Regisseure](docs/pictures/top_5_regisseure.png)
+Abbildung 6: Die Top 5 Regisseure zeigen, dass ...
+
+![Top 5 Stars](docs/pictures/top_5_stars.png)
+Abbildung 7: Die Top 5 Stars zeigen, dass ...
+
+
 ## Relevanz für die reale Welt
 Die Filmindustrie ist eine bedeutende Branche mit komplexen Faktoren, die die Filmproduktion, das Marketing und die 
 Vorlieben des Publikums beeinflussen. Die Extraktion und Analyse von Daten von IMDB liefert wertvolle Erkenntnisse über 
