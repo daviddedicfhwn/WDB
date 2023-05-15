@@ -16,25 +16,41 @@ auf Elemente zuzugreifen und die benötigten Daten zu extrahieren.
 In diesem Abschnitt werden die visualisierten Daten präsentiert und erläutert.
 
 ![FSK Distribution](docs/pictures/fsk_distribution.png)
-Abbildung 1: Die Verteilung der FSK-Bewertungen zeigt, dass ...
+Abbildung 1: Die Verteilung der FSK-Bewertungen zeigt, dass die Mehrheit der Filme eine FSK von über 12 Jahren haben. 
+Aber dies kann leider nicht genau bestätigt werden da einige Filme keine Angabe zu der FSK hatten und dementsprechend 
+die Daten dazu fehlen.
 
 ![Genre Distribution](docs/pictures/genre_distribution.png)
-Abbildung 2: Die Verteilung der Genres zeigt, dass ...
+Abbildung 2: Es ist deutlich zu sehen, dass über 700 der top 1000 Filmen das Genre Drama besitzen. 
+Wichtig zu wissen ist das mehrere Filme auch mehrere Genres besitzen.
 
 ![Mean Rating per Genre](docs/pictures/mean_rating_per_genre.png)
-Abbildung 3: Der durchschnittliche Bewertung pro Genre zeigt, dass ...
+Abbildung 3: Die Analyse des durchschnittlichen Ratings (Mean Rating) pro Genre zeigt, dass alle Genres ähnliche Werte 
+aufweisen, die um 8 liegen. Dies deutet darauf hin, dass die Qualität der Filme in allen Genres ähnlich ist und die 
+Zuschauer in der Regel die Top-Filme unabhängig vom Genre positiv bewerten. Es ist wichtig zu beachten, dass diese 
+Analyse auf den am besten bewerteten Filmen basiert, und es kann Unterschiede im durchschnittlichen Rating zwischen den 
+Genres geben, wenn man den gesamten Filmkatalog betrachtet. Dennoch zeigt der Plot, dass es eine hohe Qualität von 
+Filmen über alle Genres hinweg gibt, die von den Zuschauern geschätzt wird.
 
 ![Filmdauer und Bewertung](docs/pictures/filmdauer_und_bewertung.png)
-Abbildung 4: Der Zusammenhang zwischen Filmdauer und Bewertung zeigt, dass ...
+Abbildung 4: Der Zusammenhang zwischen Filmdauer und Bewertung zeigt, dass die Dauer der Filme keine grosse Wirkung auf 
+die Bewertung haben. Was deutlich zu sehen ist das ein Film über 300min ein Ausreisser ist.
 
 ![Anzahl der Filme pro Jahr](docs/pictures/anzahl_filme_pro_jahr.png)
-Abbildung 5: Die Anzahl der Filme pro Jahr zeigt, dass ...
+Abbildung 5: Der Plot zur Anzahl der Filme pro Jahr zeigt einen deutlichen Anstieg der Filmproduktion ab dem Jahr 1992. 
+Dies könnte auf eine Vielzahl von Faktoren zurückzuführen sein, wie zum Beispiel die Weiterentwicklung der 
+Filmtechnologie, die zunehmende Globalisierung der Filmindustrie oder Veränderungen im Zuschauerverhalten.
 
 ![Top 5 Regisseure](docs/pictures/top_5_regisseure.png)
-Abbildung 6: Die Top 5 Regisseure zeigen, dass ...
+Abbildung 6: Der Plot der Top 5 Regisseure zeigt diejenigen Filmemacher, deren Werke am häufigsten in den Top 1000 
+Filmen vertreten sind. Interessanterweise weist keiner der fünf Regisseure eine deutlich höhere Anzahl von Filmen in 
+dieser Liste auf, was darauf hindeutet, dass die künstlerische Qualität und der Erfolg ihrer Filme eher gleichmäßig 
+verteilt sind.
 
 ![Top 5 Stars](docs/pictures/top_5_stars.png)
-Abbildung 7: Die Top 5 Stars zeigen, dass ...
+Abbildung 7: Der Plot der Top 5 Stars veranschaulicht, welche Schauspieler am häufigsten in den Top 1000 Filmen 
+vertreten sind. Auffallend ist, dass keiner der fünf Stars einen deutlich höheren Anteil an Filmen in dieser Liste 
+aufweist, was auf eine gewisse Gleichverteilung der Präsenz dieser Schauspieler in erfolgreichen Filmen hindeutet.
 
 
 ## Relevanz für die reale Welt
