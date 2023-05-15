@@ -7,12 +7,7 @@ To get started with this project, follow these steps:
 1. Clone this repository: git clone https://github.com/daviddedicfhwn/WDB.git
 2. Navigate to the project directory: cd WDB
 3. Install the required Python libraries: fount in the requirements.txt file
-# Docker
 
-To run this project with Docker, follow these steps:
-
-1. Build the Docker image: `docker build -t imdb-scraper .`
-2. Run the Docker container: `docker run -it imdb-scraper`
 # Usage
 The scraper will start at the IMDB top 1000 rated movies page and navigate through each page, scraping data on each movie, such as the movie's rank, title, year, rating, duration, genre, director, and stars. The data is stored in lists which are then converted into a pandas DataFrame for easy analysis and manipulation.
 
