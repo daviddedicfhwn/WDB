@@ -1,5 +1,6 @@
 import logging
 import random
+import re
 import time
 from pathlib import Path
 
@@ -48,10 +49,12 @@ def process_movie_info(info):
     jahr = header[-1]
     film = ' '.join(header[1:-1])
 
-    if len(lines[1].split('|')) == 3:
-        fsk, dauer, genre = lines[1].split('|')
-    else:
-        fsk, dauer, genre = 'NaN', *lines[1].split('|')
+    # Check for the length of the list to avoid errors
+    match = re.match(r'(?:(.*?)\|)?\s*(.*?)\|\s*(.*)', lines[1])
+    if match:
+        fsk = match.group(1) or 'NaN'
+        dauer = match.group(2)
+        genre = match.group(3)
 
     bewertung = lines[2].split(' ')[0]
     staff = lines[-2].split(" | ")
