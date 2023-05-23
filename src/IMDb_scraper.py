@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 # Set constants
 BASE_URL = "https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating"
-DATA_DIR = Path("data")
+DATA_DIR = Path("../data")
 RETRY_ATTEMPTS = 3
 PROXIES = ["ip1:port1", "ip2:port2", "ip3:port3"]
 
