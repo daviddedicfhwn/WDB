@@ -12,15 +12,17 @@ from selenium.webdriver.common.by import By
 import os
 import filecmp
 import shutil
-from selenium.webdriver.common.proxy import Proxy, ProxyType
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] - %(message)s",
-    handlers=[logging.StreamHandler()],
+    handlers=[logging.StreamHandler()]
 )
 logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('../logs/imdb_scraper.log')
+file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s"))
+logger.addHandler(file_handler)
 
 # Set constants
 BASE_URL = "https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating"
@@ -29,6 +31,7 @@ RETRY_ATTEMPTS = 3
 PROXIES = ["ip1:port1", "ip2:port2", "ip3:port3"]
 
 def setup_driver(proxy):
+    logger.info(f'Setting up driver with proxy {proxy}.')
     user_agent = UserAgent().random
     webdriver.DesiredCapabilities.CHROME["proxy"] = {
         "httpProxy": proxy,
@@ -49,7 +52,6 @@ def process_movie_info(info):
     jahr = header[-1]
     film = ' '.join(header[1:-1])
 
-    # Check for the length of the list to avoid errors
     match = re.match(r'(?:(.*?)\|)?\s*(.*?)\|\s*(.*)', lines[1])
     if match:
         fsk = match.group(1) or 'NaN'
@@ -66,7 +68,6 @@ def process_movie_info(info):
 
 def get_movie_data(driver):
     movie_data = []
-
     last_page_reached = False
     page_number = 1
     while not last_page_reached:
@@ -81,15 +82,17 @@ def get_movie_data(driver):
             logger.info(f"Finished processing page {page_number}. Moving to the next page.")
             page_number += 1
         except Exception as e:
-            logger.info("Last page reached")
+            logger.warning(f"Error while clicking next page on page {page_number}. Error: {e}")
             last_page_reached = True
             driver.quit()
 
     return movie_data
 
 def save_data_as_csv(data, temp_file_path):
+    logger.info(f'Writing data to temp file {temp_file_path}.')
     df = pd.DataFrame(data, columns=["rang", "film", "jahr", "fsk", "dauer", "genre", "bewertung", "regisseur", "stars"])
     df.to_csv(temp_file_path, index=False)
+    logger.info('Data writing complete.')
 
 def manage_data_file(temp_file_path, file_path):
     if file_path.exists():
@@ -115,11 +118,11 @@ def main():
                 next_page = driver.find_element(By.LINK_TEXT, "Next »")
                 break
             except Exception as e:
-                logger.error(f"An error occurred: {e}")
+                logger.error(f'Error occurred with proxy {proxy} on page {attempt + 1}. Error: {e}')
                 logger.info("Retrying...")
 
         else:
-            logger.error("Failed to retrieve page after multiple attempts. Moving to the next proxy.")
+            logger.error(f'Failed to retrieve page after multiple attempts with proxy {proxy}. Moving to the next proxy.')
             continue
 
         movie_data = get_movie_data(driver)
