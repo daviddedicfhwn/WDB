@@ -18,3 +18,5 @@ I created a few issues and solved them in issue branches. The following list is 
 * Added requirements.txt and gitignore
 
 You can check out the issues and corresponding branches to better understand the changes I made.
+
+The only thing I didn't do was creating tests. This is issue is still open. The other ones are close but when viewing each issue you can look at the branch and see the changes I made.
