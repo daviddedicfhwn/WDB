@@ -10,7 +10,7 @@ Basically, the scraper is not bad and serves its purpose. Basic structures were 
 
 # Improvements
 
-I created a few issues and solved them in issue branches. The following list is a summary of the changes I made:
+I created a few issues and solved them in issue branches. Not doing that (creating issues and working with branches) cost you a lot of points. The following list is a summary of the changes I made:
 * Improved structure by adding more functions and splitting up the code into smaller parts
 * Some slight error logging tweaking
 * Utilizing regex for easier data extraction
@@ -19,4 +19,6 @@ I created a few issues and solved them in issue branches. The following list is 
 
 You can check out the issues and corresponding branches to better understand the changes I made.
 
-The only thing I didn't do was creating tests. This is issue is still open. The other ones are close but when viewing each issue you can look at the branch and see the changes I made.
+The only thing I didn't do was creating tests. This issue is still open. The other ones are close but when viewing each issue you can look at the branch and see the changes I made.
+
+
